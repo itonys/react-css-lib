@@ -1,0 +1,18 @@
+{
+  "name": "reset-css-lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.18",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.2"
+  },
+  "scripts": {
+    "build": "sass --no-source-map src/main.scss dist/reset-css-lib.css",
+    "add-important": "sed -i.bak 's/;/ !important;/g' dist/reset-css-lib.css",
+    "clean": "rm -rf dist"
+  }
+}
