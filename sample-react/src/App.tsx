@@ -15,6 +15,8 @@ function App() {
       <div>
         <h2>native</h2>
         <button onClick={handleClick}>native button</button>
+        <button onClick={handleClick} className="color-surface-indigo-50">native button</button>
+        <button onClick={handleClick} className="color-surface-indigo-100">native button</button>
         <h2>mui</h2>
         <Button onClick={handleClick} variant="contained">
           mui button
