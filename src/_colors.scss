@@ -34,28 +34,25 @@ $colors: (
   @return nth($color-map, $index);
 }
 
-// 用途別カラー変数
-/*
-$color-text-cool-gray: color("cool-gray", 900);
-$color-border-gray: color("gray", 500);
-$color-background-pink: color("pink", 100);
-$color-surface-indigo: color("indigo", 50);
-*/
 $color-surface-indigo-50: color("indigo", 50);
 $color-surface-indigo-100: color("indigo", 100);
 
-// 例：特定の色を用途別に取得
-/*
-.example {
-  color: $color-text-cool-gray; // Cool-Gray 用テキスト色
-  border-color: $color-border-gray; // Gray 用ボーダー色
-  background-color: $color-background-pink; // Pink 用背景色
-  surface-color: $color-surface-indigo; // Indigo 用サーフェス色
-}
-*/
 .color-surface-indigo-50 {
   background-color: $color-surface-indigo-50;
 }
 .color-surface-indigo-100 {
   background-color: $color-surface-indigo-100;
+}
+
+
+// CSSカスタムプロパティとして色を出力
+:root {
+  @each $color-name, $color-values in $colors {
+    $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
+    @each $shade in $shades {
+      $color-variable-name: "--color-" + $color-name + "-" + $shade;
+      $color-value: color($color-name, $shade);
+      #{$color-variable-name}: #{$color-value};
+    }
+  }
 }

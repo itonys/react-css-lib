@@ -1,4 +1,3 @@
-@charset "UTF-8" !important;
 body {
   font-family: sans-serif !important;
   color: #333 !important;
@@ -38,24 +37,153 @@ label {
   color: #333 !important;
 }
 
-/*
-$color-text-cool-gray: color("cool-gray", 900) !important;
-$color-border-gray: color("gray", 500) !important;
-$color-background-pink: color("pink", 100) !important;
-$color-surface-indigo: color("indigo", 50) !important;
-*/
-/*
-.example {
-  color: $color-text-cool-gray !important; // Cool-Gray 用テキスト色
-  border-color: $color-border-gray !important; // Gray 用ボーダー色
-  background-color: $color-background-pink !important; // Pink 用背景色
-  surface-color: $color-surface-indigo !important; // Indigo 用サーフェス色
-}
-*/
 .color-surface-indigo-50 {
   background-color: #EDF2FF !important;
 }
 
 .color-surface-indigo-100 {
   background-color: #DBE4FF !important;
+}
+
+:root {
+  --color-cool-gray-50: #FAFAFA !important;
+  --color-cool-gray-100: #F4F4F6 !important;
+  --color-cool-gray-200: #F1F3F8 !important;
+  --color-cool-gray-300: #DAE0EF !important;
+  --color-cool-gray-400: #9AA3B8 !important;
+  --color-cool-gray-500: #7A8499 !important;
+  --color-cool-gray-600: #37303F !important;
+  --color-cool-gray-700: #241F2A !important;
+  --color-cool-gray-800: #1F1A25 !important;
+  --color-cool-gray-900: #17151D !important;
+  --color-gray-50: #F8F9FA !important;
+  --color-gray-100: #F1F3F5 !important;
+  --color-gray-200: #E9ECEF !important;
+  --color-gray-300: #DEE2E6 !important;
+  --color-gray-400: #CED4DA !important;
+  --color-gray-500: #ADB5BD !important;
+  --color-gray-600: #868E96 !important;
+  --color-gray-700: #495057 !important;
+  --color-gray-800: #343A40 !important;
+  --color-gray-900: #212529 !important;
+  --color-pink-50: #FFF0F6 !important;
+  --color-pink-100: #FFDEEB !important;
+  --color-pink-200: #FCC2D7 !important;
+  --color-pink-300: #FAA2C1 !important;
+  --color-pink-400: #F783AC !important;
+  --color-pink-500: #F06595 !important;
+  --color-pink-600: #E64980 !important;
+  --color-pink-700: #D6336C !important;
+  --color-pink-800: #C2255C !important;
+  --color-pink-900: #A61E4D !important;
+  --color-red-50: #FFF5F5 !important;
+  --color-red-100: #FFE3E3 !important;
+  --color-red-200: #FFC9C9 !important;
+  --color-red-300: #FFA8A8 !important;
+  --color-red-400: #FF8787 !important;
+  --color-red-500: #FF6B6B !important;
+  --color-red-600: #FA5252 !important;
+  --color-red-700: #F03E3E !important;
+  --color-red-800: #E03131 !important;
+  --color-red-900: #C92A2A !important;
+  --color-indigo-50: #EDF2FF !important;
+  --color-indigo-100: #DBE4FF !important;
+  --color-indigo-200: #BAC8FF !important;
+  --color-indigo-300: #91A7FF !important;
+  --color-indigo-400: #748FFC !important;
+  --color-indigo-500: #5C7CFA !important;
+  --color-indigo-600: #4C6EF5 !important;
+  --color-indigo-700: #4263EB !important;
+  --color-indigo-800: #3B5BDB !important;
+  --color-indigo-900: #364FC7 !important;
+  --color-cyan-50: #E6FCF5 !important;
+  --color-cyan-100: #C5F6FA !important;
+  --color-cyan-200: #99E9F2 !important;
+  --color-cyan-300: #66D9E8 !important;
+  --color-cyan-400: #3BC9DB !important;
+  --color-cyan-500: #22B8CF !important;
+  --color-cyan-600: #15AABF !important;
+  --color-cyan-700: #1098AD !important;
+  --color-cyan-800: #0C8599 !important;
+  --color-cyan-900: #0B7285 !important;
+  --color-blue-50: #E7F5FF !important;
+  --color-blue-100: #D0EBFF !important;
+  --color-blue-200: #A5D8FF !important;
+  --color-blue-300: #74C0FC !important;
+  --color-blue-400: #4DABF7 !important;
+  --color-blue-500: #339AF0 !important;
+  --color-blue-600: #228BE6 !important;
+  --color-blue-700: #1C7ED6 !important;
+  --color-blue-800: #1971C2 !important;
+  --color-blue-900: #1864AB !important;
+  --color-green-50: #EBFBEE !important;
+  --color-green-100: #D3F9D8 !important;
+  --color-green-200: #B2F2BB !important;
+  --color-green-300: #8CE99A !important;
+  --color-green-400: #69DB7C !important;
+  --color-green-500: #51CF66 !important;
+  --color-green-600: #40C057 !important;
+  --color-green-700: #37B24D !important;
+  --color-green-800: #2F9E44 !important;
+  --color-green-900: #2B8A3E !important;
+  --color-teal-50: #E6FCF5 !important;
+  --color-teal-100: #C3FAE8 !important;
+  --color-teal-200: #96F2D7 !important;
+  --color-teal-300: #63E6BE !important;
+  --color-teal-400: #38D9A9 !important;
+  --color-teal-500: #20C997 !important;
+  --color-teal-600: #12B886 !important;
+  --color-teal-700: #0CA678 !important;
+  --color-teal-800: #099268 !important;
+  --color-teal-900: #087F5B !important;
+  --color-lime-50: #F4FCE3 !important;
+  --color-lime-100: #E9FAC8 !important;
+  --color-lime-200: #D8F5A2 !important;
+  --color-lime-300: #C0EB75 !important;
+  --color-lime-400: #A9E34B !important;
+  --color-lime-500: #94D82D !important;
+  --color-lime-600: #82C91E !important;
+  --color-lime-700: #74B816 !important;
+  --color-lime-800: #66A80F !important;
+  --color-lime-900: #5C940D !important;
+  --color-orange-50: #FFF4E6 !important;
+  --color-orange-100: #FFE8CC !important;
+  --color-orange-200: #FFD8A8 !important;
+  --color-orange-300: #FFC078 !important;
+  --color-orange-400: #FFA94D !important;
+  --color-orange-500: #FF922B !important;
+  --color-orange-600: #FD7E14 !important;
+  --color-orange-700: #F76707 !important;
+  --color-orange-800: #E8590C !important;
+  --color-orange-900: #D9480F !important;
+  --color-yellow-50: #FFF9DB !important;
+  --color-yellow-100: #FFF3BF !important;
+  --color-yellow-200: #FFEC99 !important;
+  --color-yellow-300: #FFE066 !important;
+  --color-yellow-400: #FFD43B !important;
+  --color-yellow-500: #FCC419 !important;
+  --color-yellow-600: #FAB005 !important;
+  --color-yellow-700: #F59F00 !important;
+  --color-yellow-800: #F08C00 !important;
+  --color-yellow-900: #E67700 !important;
+  --color-lemon-50: #FFFFE8 !important;
+  --color-lemon-100: #FCFCC3 !important;
+  --color-lemon-200: #FFFF9E !important;
+  --color-lemon-300: #FCFB74 !important;
+  --color-lemon-400: #F8F753 !important;
+  --color-lemon-500: #F5F230 !important;
+  --color-lemon-600: #FFE833 !important;
+  --color-lemon-700: #FFD028 !important;
+  --color-lemon-800: #FFB81B !important;
+  --color-lemon-900: #FF8E00 !important;
+  --color-purple-50: #F8F0FC !important;
+  --color-purple-100: #F3D9FA !important;
+  --color-purple-200: #EEBEFA !important;
+  --color-purple-300: #E599F7 !important;
+  --color-purple-400: #DA77F2 !important;
+  --color-purple-500: #CC5DE8 !important;
+  --color-purple-600: #BE4BDB !important;
+  --color-purple-700: #AE3EC9 !important;
+  --color-purple-800: #9C36B5 !important;
+  --color-purple-900: #862E9C !important;
 }
