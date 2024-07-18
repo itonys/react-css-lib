@@ -172,6 +172,14 @@ $colors: (
   )
 );
 
+//basic color
+$white: #ffffff;
+$black: #000000;
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
 // カスタムカラー
 $primary: #20c997;
 $secondary: #f59f00;
