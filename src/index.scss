@@ -1,12 +1,13 @@
 // src/styles/main.scss
-$body-color: #333;
+$body-color: #ffffff;
 
 body {
-  font-family: sans-serif;
   color: $body-color;
 }
 
 // src/styles/main.scss
-@import 'buttons';
-@import 'form';
+@import 'reset';
 @import 'colors';
+@import 'buttons';
+@import 'forms';
+@import 'utilities';

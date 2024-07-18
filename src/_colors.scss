@@ -1,22 +1,192 @@
-@use "sass:math";
+@use 'sass:math';
 
 // カラーパレットをマップとして定義
 $colors: (
-  "cool-gray": (#FAFAFA, #F4F4F6, #F1F3F8, #DAE0EF, #9AA3B8, #7A8499, #37303F, #241F2A, #1F1A25, #17151D),
-  "gray": (#F8F9FA, #F1F3F5, #E9ECEF, #DEE2E6, #CED4DA, #ADB5BD, #868E96, #495057, #343A40, #212529),
-  "pink": (#FFF0F6, #FFDEEB, #FCC2D7, #FAA2C1, #F783AC, #F06595, #E64980, #D6336C, #C2255C, #A61E4D),
-  "red": (#FFF5F5, #FFE3E3, #FFC9C9, #FFA8A8, #FF8787, #FF6B6B, #FA5252, #F03E3E, #E03131, #C92A2A),
-  "indigo": (#EDF2FF, #DBE4FF, #BAC8FF, #91A7FF, #748FFC, #5C7CFA, #4C6EF5, #4263EB, #3B5BDB, #364FC7),
-  "cyan": (#E6FCF5, #C5F6FA, #99E9F2, #66D9E8, #3BC9DB, #22B8CF, #15AABF, #1098AD, #0C8599, #0B7285),
-  "blue": (#E7F5FF, #D0EBFF, #A5D8FF, #74C0FC, #4DABF7, #339AF0, #228BE6, #1C7ED6, #1971C2, #1864AB),
-  "green": (#EBFBEE, #D3F9D8, #B2F2BB, #8CE99A, #69DB7C, #51CF66, #40C057, #37B24D, #2F9E44, #2B8A3E),
-  "teal": (#E6FCF5, #C3FAE8, #96F2D7, #63E6BE, #38D9A9, #20C997, #12B886, #0CA678, #099268, #087F5B),
-  "lime": (#F4FCE3, #E9FAC8, #D8F5A2, #C0EB75, #A9E34B, #94D82D, #82C91E, #74B816, #66A80F, #5C940D),
-  "orange": (#FFF4E6, #FFE8CC, #FFD8A8, #FFC078, #FFA94D, #FF922B, #FD7E14, #F76707, #E8590C, #D9480F),
-  "yellow": (#FFF9DB, #FFF3BF, #FFEC99, #FFE066, #FFD43B, #FCC419, #FAB005, #F59F00, #F08C00, #E67700),
-  "lemon": (#FFFFE8, #FCFCC3, #FFFF9E, #FCFB74, #F8F753, #F5F230, #FFE833, #FFD028, #FFB81B, #FF8E00),
-  "purple": (#F8F0FC, #F3D9FA, #EEBEFA, #E599F7, #DA77F2, #CC5DE8, #BE4BDB, #AE3EC9, #9C36B5, #862E9C)
+  'cool-gray': (
+    #fafafa,
+    #f4f4f6,
+    #f1f3f8,
+    #dae0ef,
+    #9aa3b8,
+    #7a8499,
+    #37303f,
+    #241f2a,
+    #1f1a25,
+    #17151d
+  ),
+  'gray': (
+    #f8f9fa,
+    #f1f3f5,
+    #e9ecef,
+    #dee2e6,
+    #ced4da,
+    #adb5bd,
+    #868e96,
+    #495057,
+    #343a40,
+    #212529
+  ),
+  'pink': (
+    #fff0f6,
+    #ffdeeb,
+    #fcc2d7,
+    #faa2c1,
+    #f783ac,
+    #f06595,
+    #e64980,
+    #d6336c,
+    #c2255c,
+    #a61e4d
+  ),
+  'red': (
+    #fff5f5,
+    #ffe3e3,
+    #ffc9c9,
+    #ffa8a8,
+    #ff8787,
+    #ff6b6b,
+    #fa5252,
+    #f03e3e,
+    #e03131,
+    #c92a2a
+  ),
+  'indigo': (
+    #edf2ff,
+    #dbe4ff,
+    #bac8ff,
+    #91a7ff,
+    #748ffc,
+    #5c7cfa,
+    #4c6ef5,
+    #4263eb,
+    #3b5bdb,
+    #364fc7
+  ),
+  'cyan': (
+    #e6fcf5,
+    #c5f6fa,
+    #99e9f2,
+    #66d9e8,
+    #3bc9db,
+    #22b8cf,
+    #15aabf,
+    #1098ad,
+    #0c8599,
+    #0b7285
+  ),
+  'blue': (
+    #e7f5ff,
+    #d0ebff,
+    #a5d8ff,
+    #74c0fc,
+    #4dabf7,
+    #339af0,
+    #228be6,
+    #1c7ed6,
+    #1971c2,
+    #1864ab
+  ),
+  'green': (
+    #ebfbee,
+    #d3f9d8,
+    #b2f2bb,
+    #8ce99a,
+    #69db7c,
+    #51cf66,
+    #40c057,
+    #37b24d,
+    #2f9e44,
+    #2b8a3e
+  ),
+  'teal': (
+    #e6fcf5,
+    #c3fae8,
+    #96f2d7,
+    #63e6be,
+    #38d9a9,
+    #20c997,
+    #12b886,
+    #0ca678,
+    #099268,
+    #087f5b
+  ),
+  'lime': (
+    #f4fce3,
+    #e9fac8,
+    #d8f5a2,
+    #c0eb75,
+    #a9e34b,
+    #94d82d,
+    #82c91e,
+    #74b816,
+    #66a80f,
+    #5c940d
+  ),
+  'orange': (
+    #fff4e6,
+    #ffe8cc,
+    #ffd8a8,
+    #ffc078,
+    #ffa94d,
+    #ff922b,
+    #fd7e14,
+    #f76707,
+    #e8590c,
+    #d9480f
+  ),
+  'yellow': (
+    #fff9db,
+    #fff3bf,
+    #ffec99,
+    #ffe066,
+    #ffd43b,
+    #fcc419,
+    #fab005,
+    #f59f00,
+    #f08c00,
+    #e67700
+  ),
+  'lemon': (
+    #ffffe8,
+    #fcfcc3,
+    #ffff9e,
+    #fcfb74,
+    #f8f753,
+    #f5f230,
+    #ffe833,
+    #ffd028,
+    #ffb81b,
+    #ff8e00
+  ),
+  'purple': (
+    #f8f0fc,
+    #f3d9fa,
+    #eebefa,
+    #e599f7,
+    #da77f2,
+    #cc5de8,
+    #be4bdb,
+    #ae3ec9,
+    #9c36b5,
+    #862e9c
+  )
 );
+
+// カスタムカラー
+$primary: #20c997;
+$secondary: #f59f00;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+:root {
+  --primary: #20c997;
+  --secondary: #f59f00;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+}
 
 // シェード値をインデックスに変換
 @function shade-index($shade) {
@@ -34,8 +204,8 @@ $colors: (
   @return nth($color-map, $index);
 }
 
-$color-surface-indigo-50: color("indigo", 50);
-$color-surface-indigo-100: color("indigo", 100);
+$color-surface-indigo-50: color('indigo', 50);
+$color-surface-indigo-100: color('indigo', 100);
 
 .color-surface-indigo-50 {
   background-color: $color-surface-indigo-50;
@@ -44,13 +214,12 @@ $color-surface-indigo-100: color("indigo", 100);
   background-color: $color-surface-indigo-100;
 }
 
-
 // CSSカスタムプロパティとして色を出力
 :root {
   @each $color-name, $color-values in $colors {
     $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
     @each $shade in $shades {
-      $color-variable-name: "--color-" + $color-name + "-" + $shade;
+      $color-variable-name: '--' + $color-name + $shade;
       $color-value: color($color-name, $shade);
       #{$color-variable-name}: #{$color-value};
     }
