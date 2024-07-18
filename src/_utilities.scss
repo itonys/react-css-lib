@@ -7,10 +7,12 @@
   clear: both;
 }
 
+// display: none;
 .none {
   display: none;
 }
 
+//display: block;
 .block {
   display: block;
 }
@@ -268,4 +270,33 @@ $unit: 'px';
 }
 .no-scrollbar {
   @include no-scroll-bar();
+}
+
+// text ellipsis
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.text-ellipsis {
+  &__one {
+    @include ellipsis;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  &__two {
+    @include ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+  &__three {
+    @include ellipsis;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
 }
