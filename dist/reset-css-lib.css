@@ -180,6 +180,11 @@ hr {
 }
 
 :root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
+:root {
   --primary: #20c997;
   --secondary: #f59f00;
   --color-success: #28a745;
@@ -388,119 +393,119 @@ label {
 }
 
 .fs-8 {
-  font-size: 0.8rem;
+  font-size: "0.8rem";
 }
 
 .fs-9 {
-  font-size: 0.9rem;
+  font-size: "0.9rem";
 }
 
 .fs-10 {
-  font-size: 1rem;
+  font-size: "1rem";
 }
 
 .fs-11 {
-  font-size: 1.1rem;
+  font-size: "1.1rem";
 }
 
 .fs-12 {
-  font-size: 1.2rem;
+  font-size: "1.2rem";
 }
 
 .fs-13 {
-  font-size: 1.3rem;
+  font-size: "1.3rem";
 }
 
 .fs-14 {
-  font-size: 1.4rem;
+  font-size: "1.4rem";
 }
 
 .fs-15 {
-  font-size: 1.5rem;
+  font-size: "1.5rem";
 }
 
 .fs-16 {
-  font-size: 1.6rem;
+  font-size: "1.6rem";
 }
 
 .fs-17 {
-  font-size: 1.7rem;
+  font-size: "1.7rem";
 }
 
 .fs-18 {
-  font-size: 1.8rem;
+  font-size: "1.8rem";
 }
 
 .fs-19 {
-  font-size: 1.9rem;
+  font-size: "1.9rem";
 }
 
 .fs-20 {
-  font-size: 2rem;
+  font-size: "2rem";
 }
 
 .fs-21 {
-  font-size: 2.1rem;
+  font-size: "2.1rem";
 }
 
 .fs-22 {
-  font-size: 2.2rem;
+  font-size: "2.2rem";
 }
 
 .fs-23 {
-  font-size: 2.3rem;
+  font-size: "2.3rem";
 }
 
 .fs-24 {
-  font-size: 2.4rem;
+  font-size: "2.4rem";
 }
 
 .fs-25 {
-  font-size: 2.5rem;
+  font-size: "2.5rem";
 }
 
 .fs-26 {
-  font-size: 2.6rem;
+  font-size: "2.6rem";
 }
 
 .fs-27 {
-  font-size: 2.7rem;
+  font-size: "2.7rem";
 }
 
 .fs-28 {
-  font-size: 2.8rem;
+  font-size: "2.8rem";
 }
 
 .fs-29 {
-  font-size: 2.9rem;
+  font-size: "2.9rem";
 }
 
 .fs-30 {
-  font-size: 3rem;
+  font-size: "3rem";
 }
 
 .fs-31 {
-  font-size: 3.1rem;
+  font-size: "3.1rem";
 }
 
 .fs-32 {
-  font-size: 3.2rem;
+  font-size: "3.2rem";
 }
 
 .fs-33 {
-  font-size: 3.3rem;
+  font-size: "3.3rem";
 }
 
 .fs-34 {
-  font-size: 3.4rem;
+  font-size: "3.4rem";
 }
 
 .fs-35 {
-  font-size: 3.5rem;
+  font-size: "3.5rem";
 }
 
 .fs-36 {
-  font-size: 3.6rem;
+  font-size: "3.6rem";
 }
 
 .p-0 {

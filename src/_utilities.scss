@@ -23,9 +23,9 @@ $unit: 'rem';
 @mixin list-loop($className, $styleName) {
   $i: 8;
 
-  @while $i <=$max {
-    #{$className + $i} {
-      #{$styleName}: #{($i / 10) + $unit};
+  @while $i <= $max {
+    #{#{$className}#{$i}} {
+      #{$styleName}: math.div($i, 10) + $unit;
     }
 
     $i: $i + $offset;
