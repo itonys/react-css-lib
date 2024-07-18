@@ -1,10 +1,10 @@
-// src/styles/form.scss
+// src/styles/atom/forms.scss
 $input-border-color: #ccc;
 $input-focus-border-color: #007bff;
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
   padding: 10px;
   border: 1px solid $input-border-color;
   border-radius: 4px;
