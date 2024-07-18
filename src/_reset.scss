@@ -84,14 +84,15 @@ html {
   /* Must -> 10px , 1em , 1rem */
 }
 
+$body-color: #ffffff;
+
 body {
-  font-family: 'Open sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-    'Yu Gothic', YuGothic, Verdana, Meiryo, 'M+ 1p', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
+  background: $body-color;
 }
 
 body,

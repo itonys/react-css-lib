@@ -1,12 +1,6 @@
-// src/styles/main.scss
-$body-color: #ffffff;
-
-body {
-  color: $body-color;
-}
-
-// src/styles/main.scss
+// src/styles/index.scss
 @import 'reset';
+@import 'font';
 @import 'colors';
 @import 'buttons';
 @import 'forms';

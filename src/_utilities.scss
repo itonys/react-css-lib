@@ -17,6 +17,81 @@
   display: block;
 }
 
+// custom scroll-bar
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #868e96;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}
+
+// no scroll bar
+@mixin no-scroll-bar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}
+
+.custom-scrollbar {
+  @include custom-scroll-bar();
+}
+.no-scrollbar {
+  @include no-scroll-bar();
+}
+
+// text ellipsis
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.text-ellipsis {
+  &__one {
+    @include ellipsis;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  &__two {
+    @include ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+  &__three {
+    @include ellipsis;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
+}
+
 // font-size
 $max: 36;
 $offset: 1;
@@ -225,78 +300,3 @@ $unit: 'px';
 }
 
 @include list-loop('.m-b-', 'margin-bottom');
-
-// custom scroll-bar
-@mixin custom-scroll-bar() {
-  &::-webkit-scrollbar {
-    border-radius: 10px;
-    height: 10px;
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #868e96;
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-}
-
-// no scroll bar
-@mixin no-scroll-bar() {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    height: 0;
-    width: 0;
-  }
-
-  &::-webkit-scrollbar-track {
-    height: 0;
-    width: 0;
-  }
-}
-
-.custom-scrollbar {
-  @include custom-scroll-bar();
-}
-.no-scrollbar {
-  @include no-scroll-bar();
-}
-
-// text ellipsis
-@mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-
-.text-ellipsis {
-  &__one {
-    @include ellipsis;
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-  }
-
-  &__two {
-    @include ellipsis;
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-  }
-
-  &__three {
-    @include ellipsis;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-  }
-}

@@ -212,14 +212,14 @@ $color-info: #17a2b8;
   @return nth($color-map, $index);
 }
 
-$color-surface-indigo-50: color('indigo', 50);
-$color-surface-indigo-100: color('indigo', 100);
+$color-surface-indigo50: color('indigo', 50);
+$color-surface-indigo100: color('indigo', 100);
 
-.color-surface-indigo-50 {
-  background-color: $color-surface-indigo-50;
+.color-surface-indigo50 {
+  background-color: $color-surface-indigo50;
 }
-.color-surface-indigo-100 {
-  background-color: $color-surface-indigo-100;
+.color-surface-indigo100 {
+  background-color: $color-surface-indigo100;
 }
 
 // CSSカスタムプロパティとして色を出力
