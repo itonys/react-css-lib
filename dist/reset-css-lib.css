@@ -1347,3 +1347,33 @@ label {
 .m-b-100 {
   margin-bottom: 100px;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  border-radius: 10px;
+  height: 10px;
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #868e96;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+  height: 0;
+  width: 0;
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  height: 0;
+  width: 0;
+}
