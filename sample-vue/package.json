@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "cp ../dist/* src/",
     "start": "vue-cli-service serve",
-    "prebuild": "cp ../dist/*.css src/",
+    "prebuild": "cp ../dist/* src/",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
