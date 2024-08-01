@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prestart": "cp ../dist/reset-css-lib.css src/",
+    "prestart": "cp ../dist/* src/",
     "start": "vue-cli-service serve",
-    "prebuild": "cp ../dist/reset-css-lib.css src/",
+    "prebuild": "cp ../dist/*.css src/",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

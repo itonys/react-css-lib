@@ -20,9 +20,9 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "prestart": "cp ../dist/reset-css-lib.css src/",
+    "prestart": "cp ../dist/*.css src/",
     "start": "PORT=9000 react-scripts start",
-    "prebuild": "cp ../dist/reset-css-lib.css src/",
+    "prebuild": "cp ../dist/*.css src/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

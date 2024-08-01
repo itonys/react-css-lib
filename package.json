@@ -11,7 +11,9 @@
     "sass": "^1.77.2"
   },
   "scripts": {
-    "build": "sass --no-source-map src/reset.scss dist/reset-css-lib.css",
+    "build": "sass --no-source-map src/token/main.scss dist/reset.css",
+    "build-atom": "sass --no-source-map src/atom/main.scss dist/atom.css",
+    "build-pattern": "sass --no-source-map src/pattern/main.scss dist/pattern.css",
     "add-important": "sed -i.bak 's/;/ !important;/g' dist/reset-css-lib.css",
     "clean": "rm -rf dist"
   }
