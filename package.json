@@ -11,10 +11,14 @@
     "sass": "^1.77.2"
   },
   "scripts": {
-    "build": "sass --no-source-map src/token/main.scss dist/reset.css",
-    "build-atom": "sass --no-source-map src/atom/main.scss dist/atom.css",
-    "build-pattern": "sass --no-source-map src/pattern/main.scss dist/pattern.css",
-    "add-important": "sed -i.bak 's/;/ !important;/g' dist/reset-css-lib.css",
-    "clean": "rm -rf dist"
+    "build:reset": "sass --no-source-map src/token/main.scss dist/reset.css",
+    "build:atom": "sass --no-source-map src/atom/main.scss dist/atom.css",
+    "build:pattern": "sass --no-source-map src/pattern/main.scss dist/pattern.css",
+    "clean": "rm -rf dist",
+    "build": "yarn build:reset && yarn build:atom && yarn build:pattern",
+    "watch": "nodemon --watch src --ext scss --exec 'yarn build'"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
