@@ -17,7 +17,8 @@
     "add-important": "find dist -type f -name '*.css' -exec sed -i.bak 's/;/ !important;/g' {} +",
     "clean": "rm -rf dist",
     "build": "yarn build:reset && yarn build:atom && yarn build:pattern",
-    "watch": "nodemon --watch src --ext scss --exec 'yarn build'"
+    "watch": "nodemon --watch src --ext scss --exec 'yarn build'",
+    "postbuild": "cp -R dist ./sample/public/"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
