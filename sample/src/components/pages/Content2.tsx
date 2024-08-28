@@ -1,11 +1,14 @@
 import "@/App.css";
+import Layout from "@/components/pattern/Layout";
 
 function Content2() {
   return (
-    <div>
-      <h2>Content2</h2>
-      <p>sample text2</p>
-    </div>
+    <Layout>
+      <div>
+        <h2>Content</h2>
+        <p>sample text</p>
+      </div>
+    </Layout>
   );
 }
 

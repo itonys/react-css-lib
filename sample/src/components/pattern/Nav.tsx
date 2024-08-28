@@ -9,10 +9,10 @@ function Nav() {
           <Link to="/">Top</Link>
         </li>
         <li>
-          <Link to="/content2">Menu2</Link>
+          <Link to="/content2">Content</Link>
         </li>
         <li>
-          <Link to="/content3">Menu3</Link>
+          <Link to="/content3">LP</Link>
         </li>
       </ul>
     </nav>

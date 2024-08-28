@@ -1,11 +1,14 @@
 import "@/App.css";
+import LayoutNoMenu from "@/components/pattern/LayoutNoMenu";
 
 function Content3() {
   return (
-    <div>
-      <h2>Content3</h2>
-      <p>sample text3</p>
-    </div>
+    <LayoutNoMenu>
+      <div>
+        <h2>LP</h2>
+        <p>sample text</p>
+      </div>
+    </LayoutNoMenu>
   );
 }
 
